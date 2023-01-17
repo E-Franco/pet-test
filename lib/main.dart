@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_test/modules/login/ui/pages.dart';
 
-import 'modules/home/ui/pages/home.dart';
-
-void main(){
+void main() {
   runApp(const AppRoot());
 }
-
-
 
 class AppRoot extends StatelessWidget {
   const AppRoot({super.key});
@@ -19,8 +16,7 @@ class AppRoot extends StatelessWidget {
       theme: Theme.of(context).copyWith(
         textTheme: GoogleFonts.montserratTextTheme(),
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
-

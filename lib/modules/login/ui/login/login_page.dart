@@ -1,6 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:pet_test/modules/login/ui/login/components/input_field.dart';
+import 'package:pet_test/modules/login/ui/login/components/primary_button.dart';
+import 'package:pet_test/modules/login/ui/login/components/social_button.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -28,17 +31,9 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none,
-                      ),
-                      filled: true,
-                      fillColor: Colors.white.withOpacity(.8),
-                      hintText: 'Email',
-                    ),
-                  ),
+                  InputField(),
+                  SocialButton(icon: icon, text: text, onTap: onTap),
+                  PrimaryButton(text: text, onTap: onTap),
                 ],
               ),
             ),
